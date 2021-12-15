@@ -1,1 +1,107 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i');
+
+h1{
+    margin: 0;
+}
+
+h2{ font-style: italic; }
+
+p {text-align: center;}
+
+hr {
+    border: 0;
+    clear:both;
+    display:block;
+    background-color:white;
+    height: 1px;
+}
+
+a:link,
+a:visited,
+a:active {
+  text-decoration: none;
+  color:white;
+}
+
+a:hover{
+    color:white;
+    font-style: italic;
+}
+
+.div-hover {
+    background-color: rgba(128, 128, 128, 0);
+}
+  
+.div-hover:hover {
+    background-color: rgba(128, 128, 128, .8);
+}
+
+input[type=text] {
+    color: white;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid white;
+    outline: none;
+    background-color: rgba(0, 0, 0, .8);;
+    border-radius:0px !important;
+}
+input[type=text]:focus {
+    color: white;
+    background-color: rgba(32, 32, 32, .8);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color:white;
+    font-family: 'Roboto';
+}
+
+.img-tag-container {
+    position: relative;
+}
+.tag {
+    float: left;
+    position: absolute;
+    font-weight: bold;
+    font-size: large;
+    left: 80px;
+    top: 50%;
+    z-index: 1;
+}
+
+.tag-center {
+    position: absolute;
+    left: 15%;
+    height: 100%;
+    width: 70%;
+    z-index: 2;
+}
+
+.tag-right {
+    position: absolute;
+    left: 55px;
+    height: 50%;
+    width: 70%;
+    z-index: 2;
+}
+
+.tag-left{
+    position: absolute;
+    left:10px;
+    top: 10px;
+    z-index: 2;
+}
+
+.sidebar-col{
+    display: flex;
+    flex-direction: column;
+    width: 50px;
+}
+
+.sidebar-item{
+    padding: 7px 7px 7px 7px;
+}

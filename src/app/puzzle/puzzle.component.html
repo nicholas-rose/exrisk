@@ -1,0 +1,39 @@
+<div class="overlay-container">
+    <div class="container">
+        <div class="row justify-content-between" style="padding:3% 4% 0% 4%;">
+            <div class="col-auto">
+                <h2>the puzzle</h2>
+            </div>
+            <div class="col-auto">
+                <a href="/home">
+                    <img src="/assets/icons/close-100.png" width="30px" height="auto">
+                </a>
+            </div>
+        </div>
+        <hr style="margin-left:1%;width:35%;">
+        <div class="row justify-content-center" style="padding:3% 4% 4% 4%;">
+            <div class="col-auto">
+                <p>piece #2: what did simon say (on page 72)?</p><br>
+                <p>(knowledge of piece #1 is required to find this piece)</p>
+            </div>
+        </div>
+        <div class="row justify-content-center" style="padding:3% 4% 4% 4%;">
+            <div class="col-md-12">
+                <form #puzzleForm="ngForm" (ngSubmit)="onSubmit(puzzleForm.form);">
+                    <div class="form-group">
+                        <input type="text"
+                               class="form-control"
+                               name="simonSays" 
+                               ngModel
+                               #nameField="ngModel"
+                               (keypress.enter)="onSubmit(puzzleForm.form)"
+                               required>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="row justify-content-center" style="padding:3% 4% 4% 4%;">
+            <p>{{target}}</p><br>
+            <p>{{last}}</p>
+        </div> 
+</div>
