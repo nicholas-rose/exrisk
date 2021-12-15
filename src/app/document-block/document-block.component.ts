@@ -8,7 +8,7 @@ import { Component, Input } from '@angular/core';
       <div class='container' style='outline:1px solid grey;padding:10px;'>
         <div class='row justify-content-center align-items-center'>
             <div class="col-sm-auto">
-                <img src='/assets/doc-previews/{{this.docname}}' height='100px' width='auto'>
+                <img src='/assets/large/{{this.docname}}' height='100px' width='auto'>
             </div>
             <div class="col-sm">
                 <p>{{this.description}}</p>
