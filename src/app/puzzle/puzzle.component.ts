@@ -8,9 +8,7 @@ import { Component } from '@angular/core';
 export class PuzzleComponent {
   target = '5061b91f3c5586e2b0bb4a5d213f61117299341318e4906b81e0a446aa87f843';
   ctxt = 'wMzhA5PvwoZv9IfVBkqS0l0x8ZGb145+Mk3PTXHAZZk5TWoXd5K4SHvtt39R4fnJo3wH8jgbvIlf/38N7iiQswXEoEmSDoBgXIQdnzZZCPF3ls7Pkh4Y23hq25Wj+14N'
-  last = '';
-  // guesses = ['','','',''];
-  opacities = [1,0.75,0.5,0.25];
+  guesses = ['','','',''];
 
   private toHex(str: string): string {
     var result = '';
@@ -31,13 +29,18 @@ export class PuzzleComponent {
     return Array.prototype.map.call(new Uint8Array(buf), x=>(('00'+x.toString(16)).slice(-2))).join('');
   }
 
+  public opaque(i: number): any {
+    return {'opacity':1-(i*0.25),'overflow-wrap':'break-word'};
+  }
+
   public async onSubmit(form : any) {
     const h = await this.hash(form.value.simonSays);
+    this.guesses.unshift(h);
+    this.guesses.pop();
     if (h === this.target) {
-      this.last = this.generateResponse(form.value.simonSays)
-    } else {
-      this.last = h;
+      const m = this.generateResponse(form.value.simonSays)
+      this.guesses.unshift(m);
+      this.guesses.pop();
     }
-    // this.guesses.unshift(h);
   }
 }
