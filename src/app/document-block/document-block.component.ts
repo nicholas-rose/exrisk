@@ -3,7 +3,7 @@ import { Component, Input } from '@angular/core';
 @Component({
   selector: 'app-document-block',
   template: `
-  <a href='/assets/doc-previews/{{this.docname}}' target='_blank' download>
+  <a href='/assets/{{this.docname}}' target='_blank' download>
     <div class='div-hover'>
       <div class='container' style='outline:1px solid grey;padding:10px;'>
         <div class='row justify-content-center align-items-center'>
