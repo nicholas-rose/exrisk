@@ -14,7 +14,7 @@
         <div class="row justify-content-center" style="padding:3% 4% 4% 4%;">
             <div class="col-auto">
                 <p>piece #2: what did simon say (on page 72)?</p><br>
-                <p>(knowledge of piece #1 is required to find this piece)</p>
+                <p>(knowledge of piece #1 is required to find this piece, and make sure you are on https://www.exrisk.net/puzzle)</p>
             </div>
         </div>
         <div class="row justify-content-center" style="padding:3% 4% 4% 4%;">
@@ -34,7 +34,8 @@
         </div>
         <div class="row justify-content-center" style="padding:3% 4% 4% 4%;">
             <div class="col-auto">
-                <p style="overflow-wrap:break-word;font-weight:bold;">{{target}}</p><br>
+                <p style="overflow-wrap:break-word;font-weight:bold;">{{target}}</p>
+                <hr style="width:35%;">
                 <div *ngFor="let i of [0,1,2,3]">
                     <p [ngStyle]="opaque(i)">{{guesses[i]}}</p><br>
                 </div>

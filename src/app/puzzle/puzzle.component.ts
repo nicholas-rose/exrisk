@@ -21,7 +21,7 @@ export class PuzzleComponent {
   private generateResponse(str: string): string {
     const key = this.toHex(str.slice(0,8));
     console.log(key);
-    return `[MATCH] MODE=AES-CBC IV=NULL KEY=${key} CTXT=${this.ctxt}`;
+    return `[MATCH] MODE=AES-EBC, IV=NULL, KEY=${key}, CTXT=${this.ctxt}`;
   }
 
   private async hash(str: string) {
