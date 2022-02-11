@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class PuzzleComponent {
   target = '5061b91f3c5586e2b0bb4a5d213f61117299341318e4906b81e0a446aa87f843';
+  // a testament to the power of crypto - the answer is right here ;)
   ctxt = 'wMzhA5PvwoZv9IfVBkqS0l0x8ZGb145+Mk3PTXHAZZk5TWoXd5K4SHvtt39R4fnJo3wH8jgbvIlf/38N7iiQswXEoEmSDoBgXIQdnzZZCPF3ls7Pkh4Y23hq25Wj+14N'
   guesses = ['','','',''];
 
@@ -19,6 +20,7 @@ export class PuzzleComponent {
   }
 
   private generateResponse(str: string): string {
+    // pls no brute force, unless you're willing to pay my heroku bill
     const key = this.toHex(str.slice(0,8));
     console.log(key);
     return `[MATCH] MODE=AES-EBC, IV=NULL, KEY=${key}, CTXT=${this.ctxt}`;

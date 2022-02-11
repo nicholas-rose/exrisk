@@ -11,6 +11,7 @@ export class TexttyperComponent implements OnInit {
   msg = '';
   msgIndex = 0;
   msgs = [
+    'at the risk of being overly dramatic...',
     'this could be us...',
     'this could be tomorrow...',
     "our survival isn't guaranteed...",
@@ -20,7 +21,8 @@ export class TexttyperComponent implements OnInit {
     'we have a duty to one another...',
     'we have a duty to future generations...',
   ];
-  delayTime = 75;
+  charDelay = 75;
+  msgDelay = 1000;
 
   ngOnInit () {
     this.typingAnimation();
@@ -31,19 +33,19 @@ export class TexttyperComponent implements OnInit {
   } 
 
   public async typingAnimation() {
-    await this.delay(1000);
+    await this.delay(this.msgDelay);
     while (true) {
       const msgChars = [...this.msgs[this.msgIndex]]
       for (const c of msgChars) {
         this.msg += c
-        await this.delay(this.delayTime)
+        await this.delay(this.charDelay)
       }
-      await this.delay(1000)
+      await this.delay(this.msgDelay)
       while(this.msg.length > 0) {
         this.msg = this.msg.substring(0,this.msg.length-1)
-        await this.delay(this.delayTime)
+        await this.delay(this.charDelay)
       }
-      await this.delay(1000)
+      await this.delay(this.msgDelay)
       this.msgIndex = (this.msgIndex + 1) % this.msgs.length;
     }
   }
