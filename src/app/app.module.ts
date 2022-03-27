@@ -9,11 +9,13 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { TexttyperComponent } from './texttyper/texttyper.component';
 import { FooterComponent } from './footer/footer.component';
 
-import { ResumeComponent } from './resume';
+import { ResumeComponent } from './resume/resume.component';
 import { HomeComponent } from './home/home.component';
 import { DocumentBlockComponent } from './document-block/document-block.component';
+import { DocumentLargeBlockComponent } from './document-large-block/document-large-block.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { PuzzleComponent } from './puzzle/puzzle.component';
+import { WorkComponent } from './work/work.component';
 
 @NgModule({
   declarations: [
@@ -23,8 +25,10 @@ import { PuzzleComponent } from './puzzle/puzzle.component';
     ResumeComponent,
     HomeComponent,
     DocumentBlockComponent,
+    DocumentLargeBlockComponent,
     SidebarComponent,
     PuzzleComponent,
+    WorkComponent,
   ],
   imports: [
     BrowserModule,

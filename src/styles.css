@@ -25,7 +25,6 @@ a:active {
 
 a:hover{
     color:white;
-    font-style: italic;
 }
 
 .div-hover {
@@ -104,4 +103,10 @@ body {
 
 .sidebar-item{
     padding: 7px 7px 7px 7px;
+}
+
+.overlay-container{
+    background:rgba(0, 0, 0, .8);
+    width: 100%;
+    min-height: 100%;
 }
