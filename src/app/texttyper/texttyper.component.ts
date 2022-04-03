@@ -11,7 +11,6 @@ export class TexttyperComponent implements OnInit {
   msg = '';
   msgIndex = 0;
   msgs = [
-    'press the button...',
     'this could be us...',
     'this could be tomorrow...',
     "our survival isn't guaranteed...",
